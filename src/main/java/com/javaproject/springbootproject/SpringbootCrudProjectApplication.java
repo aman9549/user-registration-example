@@ -32,7 +32,7 @@ public class SpringbootCrudProjectApplication implements CommandLineRunner {
 //		user.setUserPassword("Aman*1234");
 //		user.setPhoneNumber("954971864");
 //		user.setDateOfRegistration(new Date());
-//		user.setStatus("Active");
+//		user.setStatus(false);
 //		userRepository.save(user);
 //
 //		Addresses addresses = new Addresses();

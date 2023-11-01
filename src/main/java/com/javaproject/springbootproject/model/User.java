@@ -44,6 +44,6 @@ import java.util.Date;
     }
 
     @Column(name = "status")
-    private String status;
+    private boolean status;
 }
 

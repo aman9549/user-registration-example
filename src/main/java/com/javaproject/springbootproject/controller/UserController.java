@@ -49,7 +49,7 @@ public class UserController {
         updateUser.setUserName(userDetails.getUserName());
         updateUser.setUserPassword(updateUser.getUserPassword());
         updateUser.setPhoneNumber(updateUser.getPhoneNumber());
-        updateUser.setStatus(updateUser.getStatus());
+        updateUser.setStatus(updateUser.isStatus());
 
         userRepository.save(updateUser);
         return ResponseEntity.ok(updateUser);
@@ -59,7 +59,7 @@ public class UserController {
 
     @DeleteMapping("{id}")
     public ResponseEntity<HttpStatus> deleteUser(@PathVariable long id){
-        User user = userRepository.findById(id).orElseThrow(() -> new ResourceNotFound("Usernot exist with id:" + id));
+        User user = userRepository.findById(id).orElseThrow(() -> new ResourceNotFound("User not exist with id:" + id));
         userRepository.delete(user);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
