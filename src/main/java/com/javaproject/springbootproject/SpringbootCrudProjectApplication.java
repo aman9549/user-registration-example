@@ -27,18 +27,17 @@ public class SpringbootCrudProjectApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 
-//		User user = new User();
-//		user.setUserName("Ramesh");
-//		user.setUserPassword("Aman*1234");
-//		user.setPhoneNumber("954971864");
-//		user.setDateOfRegistration(new Date());
-//		user.setStatus(false);
-//		userRepository.save(user);
+		User user = new User();
+		user.setUserName("Ramesh");
+		user.setUserPassword("Aman*1234");
+		user.setPhoneNumber("954971864");
+		user.setDateOfRegistration(new Date());
+		user.setStatus(false);
+		userRepository.save(user);
 //
-//		Addresses addresses = new Addresses();
-//		addresses.setFullAddress("Jaipur");
-//		addresses.setUser(user);
-//		addressRepository.save(addresses);
+		Addresses addresses = new Addresses();
+		addresses.setFullAddress("Jaipur");
+		addressRepository.save(addresses);
 
 	}
 }

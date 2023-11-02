@@ -47,9 +47,10 @@ public class UserController {
         User updateUser = userRepository.findById(id).orElseThrow(()-> new ResourceNotFound("User not Exist with id:" + id));
 
         updateUser.setUserName(userDetails.getUserName());
-        updateUser.setUserPassword(updateUser.getUserPassword());
-        updateUser.setPhoneNumber(updateUser.getPhoneNumber());
-        updateUser.setStatus(updateUser.isStatus());
+        updateUser.setUserPassword(userDetails.getUserPassword());
+        updateUser.setPhoneNumber(userDetails.getPhoneNumber());
+        updateUser.setDateOfRegistration(userDetails.getDateOfRegistration());
+        updateUser.setStatus(userDetails.isStatus());
 
         userRepository.save(updateUser);
         return ResponseEntity.ok(updateUser);
