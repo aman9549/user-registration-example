@@ -51,7 +51,7 @@ public class UserController {
         updateUser.setPhoneNumber(userDetails.getPhoneNumber());
         updateUser.setDateOfRegistration(userDetails.getDateOfRegistration());
         updateUser.setStatus(userDetails.isStatus());
-
+        updateUser.setAddresses(userDetails.getAddresses());
         userRepository.save(updateUser);
         return ResponseEntity.ok(updateUser);
     }

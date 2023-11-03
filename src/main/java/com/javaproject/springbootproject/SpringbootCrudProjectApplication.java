@@ -9,7 +9,10 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
+import java.util.List;
 
 @SpringBootApplication
 public class SpringbootCrudProjectApplication implements CommandLineRunner {
@@ -27,17 +30,18 @@ public class SpringbootCrudProjectApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 
-		User user = new User();
-		user.setUserName("Ramesh");
-		user.setUserPassword("Aman*1234");
-		user.setPhoneNumber("954971864");
-		user.setDateOfRegistration(new Date());
-		user.setStatus(false);
-		userRepository.save(user);
+//		User user = new User();
+//		user.setUserName("Rajesh");
+//		user.setUserPassword("Aman*1234");
+//		user.setPhoneNumber("954971864");
+//		user.setDateOfRegistration(new Date());
+//		user.setStatus(false);
+//		List<Addresses> addresses = new ArrayList<>();
+//		Addresses address1 = new Addresses();
+//		address1.setFullAddress("gggg");
+//		addresses.add(address1);
+//		userRepository.save(user);
 //
-		Addresses addresses = new Addresses();
-		addresses.setFullAddress("Jaipur");
-		addressRepository.save(addresses);
 
 	}
 }

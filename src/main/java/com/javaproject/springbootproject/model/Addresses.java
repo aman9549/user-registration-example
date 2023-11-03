@@ -1,23 +1,23 @@
 package com.javaproject.springbootproject.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import jakarta.transaction.Transactional;
+import lombok.*;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@Transactional
+@Data
 @Entity
 @Table(name = "UserAddress")
 public class Addresses {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long addressId;
-    @ManyToOne
-    @JoinColumn(name = "user_id")
-    private User user;
+    private long addressId;
+    @Column(name = "full_add")
     private String fullAddress;
+
+
 }

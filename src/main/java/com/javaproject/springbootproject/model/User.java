@@ -2,16 +2,17 @@ package com.javaproject.springbootproject.model;
 
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import jakarta.transaction.Transactional;
+import lombok.*;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
+import java.util.List;
 
 @Getter
 @Setter
+@Transactional
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
@@ -45,5 +46,9 @@ import java.util.Date;
 
     @Column(name = "status")
     private boolean status;
+
+  @OneToMany(cascade = CascadeType.ALL)
+  @JoinColumn(name = "fk_user_id", referencedColumnName="user_id")
+  private List<Addresses> addresses;
 }
 
